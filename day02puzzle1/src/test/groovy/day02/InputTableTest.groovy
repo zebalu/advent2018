@@ -39,14 +39,14 @@ class InputTableTest extends Specification {
         expect:
         12 == inputTable.checkSum()
     }
-    
+    /*
     def exampleCheckSum2 () {
         def inputTable = InputTable.fromStream(this.getClass().getResourceAsStream('/input3.txt'))
         
         expect:
         4920 == inputTable.checkSum()
     }
-    
+    */
     private InputStream toStream(list) {
         StringJoiner sj = new StringJoiner("\n");
         list.each { e ->

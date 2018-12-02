@@ -39,14 +39,14 @@ class InputTableTest extends Specification {
         expect:
         'fgij' == inputTable.firstCommonLettersWithOneDistance()
     }
-    
+/*    
     def exampleCommonLetters2 () {
         def inputTable = InputTable.fromStream(this.getClass().getResourceAsStream('/input4.txt'))
         
         expect:
         'fonbwmjquwtapeyzikghtvdxl' == inputTable.firstCommonLettersWithOneDistance()
     }
-    
+*/    
     private InputStream toStream(list) {
         StringJoiner sj = new StringJoiner("\n");
         list.each { e ->
