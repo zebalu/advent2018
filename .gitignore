@@ -1,5 +1,9 @@
 .gradle
 /build/
+/bin
+/.settings
+.classpath
+.project
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -12,3 +16,12 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+.classpath
+.groovy
+/day01puzzle1/.settings
+/day01puzzle1/bin
+/day01puzzle1/build
+/*/.settings
+/*/bin
+/*/build
+*.class
