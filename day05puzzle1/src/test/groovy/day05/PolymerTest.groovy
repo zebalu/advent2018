@@ -95,7 +95,7 @@ class PolymerTest extends Specification {
         expect:
         p.chain == 'daDA'
     }
-    /*
+ /*   
     def 'shrink input'() {
         File f = new File(this.getClass().getResource('/input9.txt').file)
         Polymer p = new Polymer(f.getText('UTF-8'))
@@ -103,7 +103,7 @@ class PolymerTest extends Specification {
         p.react()
         
         expect:
-        9060==p.chain.size()
+        9060==p.size()
     }
     
     def 'best deduction found with shrink input'() {
@@ -112,7 +112,7 @@ class PolymerTest extends Specification {
         p = p.bestReduction()
         
         expect:
-        6310==p.chain.size()
+        6310==p.size()
     }
-    */
+ */   
 }
