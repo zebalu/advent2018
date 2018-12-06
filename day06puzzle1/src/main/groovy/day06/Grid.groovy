@@ -26,14 +26,6 @@ class Grid {
    
    int largestArea() {
        Map<Coordinate, Integer> areas = [:]
-       /*
-       for(int x=minX(); x<=maxX(); ++x) {
-           for(int y = minY(); y<=maxY(); ++y) {
-               Coordinate c = new Coordinate(x,y)
-               
-           }
-       }
-       */
        allCoordinates.each { 
            if(isInfinit(it)) {
                return
@@ -58,7 +50,9 @@ class Grid {
            }
            areas[it]=sumArea
        }
-       println areas
+       return areas.entrySet().stream().max{a,b -> 
+            a.value - b.value
+        }.orElseThrow{new NoSuchElementException()}.value
    }
    
    List<Coordinate> getAllPointsBetween(Coordinate c1, Coordinate c2) {
