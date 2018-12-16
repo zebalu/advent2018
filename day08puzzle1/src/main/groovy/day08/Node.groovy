@@ -23,6 +23,10 @@ public class Node {
         return metaDataCount == metaData.size()
     }
 
+    boolean isMetaDataSet() {
+        return metaDataCount >= 0
+    }
+    
     int value() {
         if(childsCount == 0) {
             return metaData.sum()
