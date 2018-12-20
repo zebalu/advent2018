@@ -82,12 +82,6 @@ class Computer {
 			this."${pc.first}"(pc.second, pc.third, pc.fourth)
 			i = registers[ip]
 			i++
-			//if(steps%1_000_000 == 0) {
-				println "$steps \t i: $i r[i]: ${registers[ip]} regs: ${registers}"
-			//}
-				if(steps >100) {
-					i=100000
-				}
 		}
 	}
 }

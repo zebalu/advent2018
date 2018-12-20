@@ -14,7 +14,7 @@ class ComputerTest extends Specification {
 		expect:
 		c.registers == [6, 5, 6, 0, 0, 9]
 	}
-	
+/*	
 	def "execute input"() {
 		def example = ReadProgram.read(getClass().getResourceAsStream("/input.txt"))
 		Computer c = new Computer()
@@ -37,5 +37,5 @@ class ComputerTest extends Specification {
 		expect:
 		c.registers[0] == 28137600
 	}
-
+*/
 }
