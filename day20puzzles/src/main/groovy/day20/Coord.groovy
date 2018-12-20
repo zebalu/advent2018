@@ -3,12 +3,14 @@ package day20
 import groovy.transform.Canonical
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.MapConstructor
+import groovy.transform.Sortable
 import groovy.transform.ToString
 
 @Canonical
 @EqualsAndHashCode(includes=['x','y'])
 @ToString(includeFields=true, includes=['x', 'y'])
 @MapConstructor
+@Sortable(includes=['x', 'y'])
 class Coord {
 
 	final int x

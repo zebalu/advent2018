@@ -19,12 +19,7 @@ class BaseMap {
 			copyDoors(rooms[r.coord], r)
 		} else {
 			rooms[r.coord] = r
-			/*
-			 def directions = ['east', 'west', 'south', 'north']
-			 directions.each {
-			 r."$it" = rooms[r.coord."$it"]
-			 }
-			 */
+			
 			if(r.coord.x < minX) {
 				minX = r.coord.x
 			}
