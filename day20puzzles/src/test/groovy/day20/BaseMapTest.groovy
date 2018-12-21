@@ -1,10 +1,5 @@
 package day20;
 
-import static org.junit.Assert.*
-
-import org.apache.tools.ant.filters.StringInputStream
-import org.junit.Test
-
 import spock.lang.Specification
 
 class BaseMapTest extends Specification {
@@ -79,4 +74,20 @@ class BaseMapTest extends Specification {
 		count == 8240
 	}
 	*/
+	
+	private static class StringInputStream extends InputStream {
+		
+		private final ByteArrayInputStream bais = null;
+		
+		public StringInputStream(String str) {
+			bais = new ByteArrayInputStream(str.getBytes('UTF-8'))
+		}
+
+		@Override
+		public int read() throws IOException {
+			return bais.read()
+		}
+		
+		
+	}
 }

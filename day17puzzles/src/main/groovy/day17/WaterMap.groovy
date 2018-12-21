@@ -1,7 +1,5 @@
 package day17
 
-import static org.junit.Assert.formatClassAndValue
-
 class WaterMap {
 
 	Map<Coord, MapElement> points = [:]

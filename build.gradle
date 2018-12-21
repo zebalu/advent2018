@@ -5,7 +5,7 @@
  * For more details take a look at the Groovy Quickstart chapter in the Gradle
  * user guide available at https://docs.gradle.org/4.8/userguide/tutorial_groovy_projects.html
  */
- 
+
 plugins {
 	// Apply the groovy plugin to add support for Groovy
 	id 'groovy'
@@ -14,7 +14,7 @@ plugins {
 
 dependencies {
 	// Use the latest Groovy version for building this library
-	compile 'org.codehaus.groovy:groovy-all:2.5.4'
+	compile 'org.codehaus.groovy:groovy:2.5.4:indy'
 
 	// Use the awesome Spock testing and specification framework
 	testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
@@ -28,23 +28,27 @@ repositories {
 }
 
 subprojects {
- 
+
 	apply plugin: 'groovy'
 	apply plugin: 'eclipse'
-	
+
 	sourceCompatibility = JavaVersion.VERSION_1_8
 	targetCompatibility = JavaVersion.VERSION_1_8
-	
+
 	dependencies {
 		// Use the latest Groovy version for building this library
-		implementation 'org.codehaus.groovy:groovy-all:2.5.4'
+		implementation 'org.codehaus.groovy:groovy:2.5.4:indy'
 
 		// Use the awesome Spock testing and specification framework
 		testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
-        
-        // https://mvnrepository.com/artifact/junit/junit
-        testCompile group: 'junit', name: 'junit', version: '4.12'
-        
+
+		// https://mvnrepository.com/artifact/junit/junit
+		testCompile group: 'junit', name: 'junit', version: '4.12'
+
+	}
+
+	compileGroovy {
+		groovyOptions.optimizationOptions.indy = true
 	}
 
 	// In this section you declare where to find the dependencies of your project
@@ -53,4 +57,24 @@ subprojects {
 		// You can declare any Maven/Ivy/file repository here.
 		jcenter()
 	}
-} 
+	
+	test {
+		testLogging {
+			// Make sure output from
+			// standard out or error is shown
+			// in Gradle output.
+			showStandardStreams = false
+	 
+			// Or we use events method:
+			// events 'standard_out', 'standard_error'
+	 
+			// Or set property events:
+			// events = ['standard_out', 'standard_error']
+	 
+			// Instead of string values we can
+			// use enum values:
+			// events org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_OUT,
+			//        org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_ERROR,
+		}
+	}
+}

@@ -41,7 +41,7 @@ class Observation {
 
 	static List<Observation> getObservationsFromInput() {
 		List<Observation> result = []
-		this.getClass().getResourceAsStream('/observed.txt').withReader { r ->
+		Observation.class.getResourceAsStream('/observed.txt').withReader { r ->
 			def lines = r.readLines()
 			for(int i=0; i<lines.size(); i+=4) {
 				result.add(new Observation(lines[i], lines[i+1], lines[i+2]))

@@ -105,7 +105,7 @@ class BoardTest extends Specification {
 		'example5.txt' | 12          | 6474
 		'example6.txt' | 34          | 1140
 	}
-	
+	/*
 	def input() {
 		Warior.elfAttackPower = 3
 		Board  b = new Board(getClass().getResourceAsStream('/input.txt'))
@@ -116,7 +116,7 @@ class BoardTest extends Specification {
 		expect:
 		b.outCome == 179968
 	}
-	
+	*/
 	def modifiedExample1() {
 		Warior.elfAttackPower = 15
 		Board  b = new Board(getClass().getResourceAsStream('/example1.txt'))
@@ -128,7 +128,7 @@ class BoardTest extends Specification {
 		b.outCome == 4988
 		!b.isAnElfKilled
 	}
-	
+	/*
 	def modifiedInput() {
 		Warior.elfAttackPower = 3
 		boolean attackPowerFound = false
@@ -149,4 +149,5 @@ class BoardTest extends Specification {
 		b.outCome == 42098
 		Warior.elfAttackPower==20
 	}
+	*/
 }

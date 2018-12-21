@@ -1,9 +1,5 @@
 package day17;
 
-import static org.junit.Assert.*
-
-import org.junit.Test
-
 import spock.lang.Specification
 
 class WaterMapTest extends Specification {
@@ -43,25 +39,25 @@ class WaterMapTest extends Specification {
 		expect:
 		wm.restingWaterCount == 29
 	}
-	/*
+	
 	def inputFilled() {
 		WaterMap wm = readInput()
 		
-		PrintWriter pw = new PrintWriter('he0.txt')
-		pw.println(wm.minX +" \t "+wm.maxX)
-		pw.println(wm.minY +" \t "+wm.maxY)
-		pw.println(wm)
-		pw.close()
+//		PrintWriter pw = new PrintWriter('he0.txt')
+//		pw.println(wm.minX +" \t "+wm.maxX)
+//		pw.println(wm.minY +" \t "+wm.maxY)
+//		pw.println(wm)
+//		pw.close()
 		
 		
 		wm.flowFrom(new Coord(500,2))
 
 		//println wm
-		pw = new PrintWriter('he1.txt')
-		pw.println(wm.minX +" \t "+wm.maxX)
-		pw.println(wm.minY +" \t "+wm.maxY)
-		pw.println(wm)
-		pw.close()
+//		pw = new PrintWriter('he1.txt')
+//		pw.println(wm.minX +" \t "+wm.maxX)
+//		pw.println(wm.minY +" \t "+wm.maxY)
+//		pw.println(wm)
+//		pw.close()
 
 		expect:
 		wm.waterCount == 39367
@@ -70,26 +66,26 @@ class WaterMapTest extends Specification {
 	def inputRestingCount() {
 		WaterMap wm = readInput()
 		
-		PrintWriter pw = new PrintWriter('he0.txt')
-		pw.println(wm.minX +" \t "+wm.maxX)
-		pw.println(wm.minY +" \t "+wm.maxY)
-		pw.println(wm)
-		pw.close()
+//		PrintWriter pw = new PrintWriter('he0.txt')
+//		pw.println(wm.minX +" \t "+wm.maxX)
+//		pw.println(wm.minY +" \t "+wm.maxY)
+//		pw.println(wm)
+//		pw.close()
 		
 		
 		wm.flowFrom(new Coord(500,2))
 
-		//println wm
-		pw = new PrintWriter('he1.txt')
-		pw.println(wm.minX +" \t "+wm.maxX)
-		pw.println(wm.minY +" \t "+wm.maxY)
-		pw.println(wm)
-		pw.close()
+//		//println wm
+//		pw = new PrintWriter('he1.txt')
+//		pw.println(wm.minX +" \t "+wm.maxX)
+//		pw.println(wm.minY +" \t "+wm.maxY)
+//		pw.println(wm)
+//		pw.close()
 
 		expect:
 		wm.restingWaterCount == 33061
 	}
-*/
+
 	def readInput() {
 		return readResource('/input.txt')
 	}
